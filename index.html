@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag & Drop Knowledge Test</title>
+  </head>
+  <body>
+    <header id="start-message">
+      <h1>Time to test your knowledge!</h1>
+      <p>Drag the component name and drop it on the matching description</p>
+    </header>
+    <main>
+      <div>
+        <ul class="draggable-list">
+          <!-- "c" means component -->
+          <li id="c1" draggable="true" class="c-name">Suction line</li>
+          <li id="c2" draggable="true" class="c-name">
+            Low-pressure transducer
+          </li>
+          <li id="c3" draggable="true" class="c-name">PLC controller</li>
+          <li id="c4" draggable="true" class="c-name">Frequency inverter</li>
+          <li id="c5" draggable="true" class="c-name">Inverter compressor</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="draggable-list">
+          <!-- "d" means description -->
+          <li id="d3" draggable="true">
+            It receives a signal from the low-pressure transducer and passes it
+            to the inverter. It can be built into inverter or mounted separately
+          </li>
+          <li id="d5" draggable="true">
+            It operates with the inverter and its main function is to compress
+            the low temperature and low-pressure refrigerant gas. Most often it
+            is scroll or rotary type
+          </li>
+          <li id="d4" draggable="true">
+            It is used for rotation speed regulation of the compressor to adjust
+            the current capacity, reduce the energy consumption and quantity of
+            compressor's start-stop cycles
+          </li>
+          <li id="d1" draggable="true">
+            Pipeline at the inlet of the condensing unit through which
+            superheated refrigerant vapors at low temperature and low-pressure
+            are sucked in by the compressor
+          </li>
+          <li id="d2" draggable="true">
+            A component which measures the pressure on the suction line and
+            converts it into a signal that is then transmitted to the controller
+            or directly to the frequency inverter
+          </li>
+        </ul>
+      </div>
+    </main>
+    <!-- Display it only if there is a win  -->
+    <div id="end-message">
+      <h2>Well Done!</h2>
+      <table>
+        <tr>
+          <th>Component</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Suction line</td>
+          <td class="answer">
+            Pipeline at the inlet of the condensing unit through which
+            superheated refrigerant vapors at low temperature and low-pressure
+            are sucked in by the compressor
+          </td>
+        </tr>
+        <tr>
+          <td>Low-pressure transducer</td>
+          <td class="answer">
+            A component which measures the pressure on the suction line and
+            converts it into a signal that is then transmitted to the controller
+            or directly to the frequency inverter
+          </td>
+        </tr>
+        <tr>
+          <td>PLC controller</td>
+          <td class="answer">
+            It receives a signal from the low-pressure transducer and passes it
+            to the inverter. It can be built into the inverter or mounted
+            separately
+          </td>
+        </tr>
+        <tr>
+          <td>Frequency inverter</td>
+          <td class="answer">
+            It is used for rotation speed regulation of the compressor to adjust
+            the current capacity, reduce the energy consumption and quantity of
+            compressor's start-stop cycles
+          </td>
+        </tr>
+        <tr>
+          <td>Inverter compressor</td>
+          <td class="answer">
+            It operates with the inverter and its main function is to compress
+            the low temperature and low-pressure refrigerant gas. Most often it
+            is scroll or rotary type
+          </td>
+        </tr>
+      </table>
+      <button onclick="">Close</button>
+    </div>
+  </body>
+</html>
