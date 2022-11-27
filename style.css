@@ -99,13 +99,10 @@ button:hover {
   display: block;
 }
 
-/* Initially should not be displayed */
 #end-message {
   margin: -50px auto 20px auto;
   display: none;
 }
-
-/* Modal */
 
 .modal {
   display: none;
