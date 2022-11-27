@@ -3,6 +3,10 @@ const draggableListItems = document.querySelectorAll(".draggable-list li");
 const endMessage = document.getElementById("end-message");
 const startMessage = document.getElementById("start-message");
 
+// 12. Get the Modal
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
+
 // 2. Current phrase being dragged - the "id" must be known to match with the description and to check if the "id's" match
 let selectedId;
 
@@ -21,7 +25,7 @@ addEventListeners();
 function dragStart() {
   // as soon as we start dragging an item, we want to know it's "id":
   selectedId = this.id;
-  console.log(selectedId);
+  //   console.log(selectedId);
 }
 
 // 7.2
@@ -45,7 +49,7 @@ function dragOver(event) {
 function dragDrop() {
   // when we start dragging, the selected "id" must be known to compare with the target "id" of the dropable zone:
   dropTargetId = this.id;
-  console.log(dropTargetId);
+  //   console.log(dropTargetId);
 
   // 9.
   if (checkForMatch(selectedId, dropTargetId)) {
@@ -58,6 +62,9 @@ function dragDrop() {
     document.getElementById(selectedId).style.display = "none";
     document.getElementById(dropTargetId).style.display = "none";
     matchingCounter++;
+  } // 13. Display modal:
+  else {
+    modal.style.display = "block";
   }
 
   // 9.1 - show end-message when all is matched:
@@ -136,4 +143,14 @@ function addEventListeners() {
     item.addEventListener("dragover", dragOver);
     item.addEventListener("dragleave", dragLeave);
   });
+
+  // 14. Close the Modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 }
